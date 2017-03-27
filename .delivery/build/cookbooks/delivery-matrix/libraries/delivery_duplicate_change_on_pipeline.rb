@@ -101,6 +101,7 @@ class Chef
             ::Chef::Log.error("Failed to create duplicate change.")
             ::Chef::Log.error("#{change_url} not a valid URL")
             ::Chef::Log.error("'delivery review' output: #{delivery_review.stdout}")
+            ::Chef::Log.error("'delivery review' error output: #{delivery_review.stderr}")
             raise "Failed to create duplicate change."
           end
         end
